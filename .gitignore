@@ -1,6 +1,5 @@
 .idea/
-book-flight-module-output*/
+output*/
 docker-compose/
-search-module-output*/
 selenium-docker.iml
 target/
