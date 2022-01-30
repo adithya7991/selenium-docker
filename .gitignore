@@ -1,5 +1,4 @@
 .idea/
-output*/
 docker-compose/
 selenium-docker.iml
 target/
