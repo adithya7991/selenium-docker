@@ -21,6 +21,8 @@ COPY ./target/selenium-docker-tests.jar selenium-docker-tests.jar
 COPY ./src/test/test-resources src/test/test-resources
 
 # HealthCheck To run tests only after nodes starts & gets registered to hub
-# When transferring sh/bash file from windows to linux, format issue araise, to overcome use notepad++ & edit->eolversion->unix & save as .bash
+# When transferring sh/bash file from windows to linux, format issue araise, to overcome use notepad++ & edit->eolversion->unix & save as .bash & use dos2unix
 COPY healthcheck.bash  healthcheck.bash
+RUN dos2unix healthcheck.bash
+
 ENTRYPOINT bash healthcheck.bash
