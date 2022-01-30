@@ -6,7 +6,7 @@
 echo "Checking if hub is ready - $HOST"
 while [ "$( curl -s http://$HOST:4444/wd/hub/status | jq -r .value.ready )" != "true" ]
 do
-	sleep 1
+sleep 1
 done
 echo $pwd
 # start the java command
