@@ -1,5 +1,5 @@
 #This docker file is to pack automation testing code into an image
-FROM openjdk:8u265-jre
+FROM openjdk:8u212-jre-alpine3.9
 RUN apt update
 # Curl is to get data from website
 # jq is cmdline json parser
