@@ -1,9 +1,8 @@
 #This docker file is to pack automation testing code into an image
 FROM openjdk:8u212-jre-alpine3.9
-RUN apt update
 # Curl is to get data from website
 # jq is cmdline json parser
-RUN apt install -y curl jq
+RUN apk add curl jq
 WORKDIR /code
 
 # From this point, everthing will happen in /code dir
